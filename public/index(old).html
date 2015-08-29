@@ -7,12 +7,15 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body ng-controller="StoreController as store">
+
 <!-- ng-init="tab = 1" initializes tab to 1 --> <!-- The ng-init should go inside a controller (not directly into a view or html) as a best practice-->
+
 <section ng-controller="PanelController as panel" class="panel">
   <ul class="nav nav-pills">
   <!-- the statement ng-click="tab = 1" assigns a value of an expression to "tab" when it is clicked -->
   
   <!-- ng-class="{active:tab ===1}" highlights the tab (in blue) when a specific tab is clicked. tab 1 is highlighted when the page first renders because the default (ie ng-init) is set to tab 1 -->
+
   <li ng-class="{active: panel.isSelected(1)}"> 
     <a href ng-click="panel.selectTab(1)">tab 1</a>
   </li>
@@ -26,6 +29,7 @@
     <a href ng-click="panel.selectTab(4)">tab 4</a>
   </li>
   </ul>
+
   <!-- this displays the tab value. the value automatically updates when a tab is clicked and will not show up until a tab is clicked (ie two-way data binding!!!) -->
   {{tab}}
 

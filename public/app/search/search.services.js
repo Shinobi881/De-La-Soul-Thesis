@@ -22,6 +22,8 @@ angular.module('soundGlomerate.searchFactory', [])
   var events = []; 
 
 
+
+  // Cosider having the search object passed in but this method may be faster
   var getEventBriteData = function(city, startDate, endDate){ // Defines the getEventBriteData fxn
 
 

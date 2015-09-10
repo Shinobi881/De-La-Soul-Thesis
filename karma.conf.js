@@ -5,24 +5,21 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: './',
 
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine', 'requirejs'],
+    frameworks: ['jasmine'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      {pattern: 'public/app/filter/filter.js', included: false},
-      {pattern: 'public/app/filter/filterSpec.js', included: false},
-      {pattern: 'public/app/filter/filter.services.js[3.9m', included: false},
-      {pattern: 'public/app/filter/filter.services.js', included: false},
-      {pattern: 'public/app/filter/filter.servicesSpec.js', included: false},
-      {pattern: 'public/app/filter/filter.html', included: false},
-      {pattern: 'public/app/filter/filterHTMLSpec', included: false},
-      {pattern: 'public/app/filter/filterHTMLSpec.js', included: false}
+      // Angular source files
+
+      // App code
+
+      // Specfiles
     ],
 
 
@@ -67,6 +64,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: true
   })
 }

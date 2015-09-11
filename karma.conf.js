@@ -1,11 +1,11 @@
 // Karma configuration
-// Generated on Wed Sep 09 2015 19:40:03 GMT-0700 (PDT)
+// Generated on Thu Sep 10 2015 15:50:15 GMT-0700 (PDT)
 
 module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: './',
+    basePath: '',
 
 
     // frameworks to use
@@ -15,11 +15,18 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      // Angular source files
+      'node_modules/angular/angular.js',
+      'node_modules/angular-mocks/angular-mocks.js',
+      'public/bower_components/ui-router/release/angular-ui-router.min.js',
+      
+      // Source files
+      'public/app/search/search.js',
+      'public/app/search/search.services.js',
+      'public/app/app.js',
+      
+      // Spec files
+      'test/searchTest/searchControllerSpec.js'
 
-      // App code
-
-      // Specfiles
     ],
 
 
@@ -54,12 +61,12 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+    autoWatch: false,
 
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'PhantomJS'],
+    browsers: [ 'PhantomJS'],
 
 
     // Continuous Integration mode

@@ -1,41 +1,55 @@
 describe('SearchController', function() {
 
-    var $scope, $httpBackend, Search, $rootScope createController;
+    var $controller;
 
-    beforeEach(module('soundGlomerate'));
-
-    beforeEach(inject(function($injector){
+    beforeEach(module('ui.router'));
+    beforeEach(module('soundGlomerate.search'));
+    beforeEach(inject(function(_$controller_){
+      $controller = _$controller_;
         
-      $rootScope = $injector.get('$rootScope');
-      $httpBackend = $injector.get('$httpBackend');
-      Search = $injector.get('Search');
-      $scope = $rootScope.$new();
 
-      var $controller = $injector.get('$controller');
-
-      createController = function() {
-        return $controller('SearchCOntroller', {
-          $scope: $scope,
-          Search: Search
-        });
-      };
 
     }));
 
-    var searchObject = {
-      location: "Oakland",
-      startDate: Thu Sep 10 2015 00:00:00 GMT-0700 (PDT),
-      endDate: Fri Sep 11 2015 00:00:00 GMT-0700 (PDT)
-    }
+    // var searchObject = {
+    //   location: "Oakland",
+    //   // startDate: Thu Sep 10 2015 00:00:00 GMT-0700 (PDT),
+    //   // endDate: Fri Sep 11 2015 00:00:00 GMT-0700 (PDT)
+    // }
 
+    describe('SearchController', function() {
+      it('it should have a search method', function() {
+          var $scope = {};
 
+          var controller = $controller('SearchController', {$scope: $scope, });
 
-    it('it should have and Search method', function() {
-        expect($scope.update).toEqual('function');
-        expect($scope.getEBEvents).toEqual('function');
-        expect($scope.getEBEvents).toEqual('function');
-        
+          expect($scope.message).toEqual("hello");
+          // expect($scope.getEBEvents).toEqual('function');
+          
+          
+      });
     });
 
     
+
+    
 });
+
+// describe("hello world", function() {
+  
+//   // it("should work", function (){
+//   //   expect(true).toBe(true)
+//   // })
+  
+//   var searchCtrl;
+//   beforeEach(module["soundGlomerate"])
+//   beforeEach(inject(function($controller) {
+//   var searchCtrl = $controller("SearchController")
+  
+//   }))
+//   describe ("searchCtrl", function(){
+//     it("should say hello", function(){
+//       expect(searchCtrl.message).toBe("hello")
+//     })
+//   })
+// })

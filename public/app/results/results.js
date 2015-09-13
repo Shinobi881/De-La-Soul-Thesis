@@ -1,4 +1,5 @@
 'use strict'
+
 angular.module('soundGlomerate.results', ['soundGlomerate.resultsFactory', 'soundGlomerate.selectedEventFactory', 'soundGlomerate.mapFactory', 'ngMap'])
 
 .controller('ResultsController', ['$scope', '$state', 'Results', 'SelectedEvent','Map', function ($scope, $state, Results, SelectedEvent, Map) {

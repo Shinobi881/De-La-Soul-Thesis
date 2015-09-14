@@ -19,6 +19,8 @@ angular.module('soundGlomerate.results', ['soundGlomerate.resultsFactory', 'soun
 
     $scope.positions = [{lat:37.8043637, long:-122.2711137}];
  
+
+ // Filter logic: 
     var swap = function (apiGenres) {
       var result = {};
       for (var genreCode in apiGenres) {

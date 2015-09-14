@@ -1,12 +1,12 @@
 <div class="row container-fluid">
   <div ui-view="search"></div>
 </div>
-<div class="col-sm-3">
-  <div ui-view="map" ></div>
+<div class="containter">
+  <div class="row">
+    <div class="pull-left" ui-view="map" ></div>
+    <div ui-view="results" ></div>
+  </div>
 </div>
-<div class="container pull-right">
-  <div ui-view="results" class="row col-xs-8"></div>
-</div>
-<div class="col-md-3" style="border-style:solid">
+<!-- <div class="col-md-3" style="border-style:solid">
   <div ui-view="filter" ></div>
-</div>
+</div> -->

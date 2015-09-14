@@ -18,7 +18,7 @@ angular.module('soundGlomerate.searchFactory', ['soundGlomerate.keysFactory'])
         
     return $http({ // Http request to Eventbrite
       method: 'GET',
-      url: 'https://www.eventbriteapi.com/v3/events/search/?popular=on&sort_by=date&venue.city=' + city + 
+      url: 'https://www.eventbriteapi.com/v3/events/search/?sort_by=date&venue.city=' + city + 
           '&venue.region=CA' + startDate + endDate + '&categories=103&expand=venue&token=' + APIkeys.eventBriteKey
     
     }).success(function(eventBriteData){ // Promise for APi data
@@ -31,22 +31,8 @@ angular.module('soundGlomerate.searchFactory', ['soundGlomerate.keysFactory'])
       });  
   };
 
+  // Call to Facebook API
   searchService.faceBookCall = function(city, startDate, endDate) {
-    return $http({ // Http request to Eventbrite
-      method: 'GET',
-      url: 'https://www.eventbriteapi.com/v3/events/search/?popular=on&sort_by=date&venue.city=' + city + 
-          '&venue.region=CA' + startDate + endDate + '&categories=103&expand=venue&token=' + APIkeys.eventBriteKey
-    
-    }).success(function(eventBriteData){ // Promise for APi data
-        eventBriteData.events.forEach(function(evnt){            
-          // Push each event into the events array 
-          searchService.events.push(evnt);
-        });
-        
-        return searchService.events
-      }); 
-
-
     console.log('Facebook API call', city, startDate, endDate);
   }
 

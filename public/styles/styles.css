@@ -64,13 +64,13 @@ div #query{
 *****************************************************************************
 */
 
-/*div#filterOptions > p{
+div#filterOptions > p{
     color:black;
     font-size: 18px;
     font-weight: bold;
 }
 
-hr#filterOptions {
+/*hr#filterOptions {
     width: 100%;
 }*/
 

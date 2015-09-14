@@ -5,7 +5,7 @@ angular.module('soundGlomerate.results', ['soundGlomerate.resultsFactory', 'soun
 .controller('ResultsController', ['$scope', '$state', 'Results', 'SelectedEvent','Map', function ($scope, $state, Results, SelectedEvent, Map) {
 
     $scope.apiData = Results.events;
-
+    $scope.genres = Results.eventBriteGenres;
   // A click event to list for a click on the div, link, or event
     $scope.selectedEvent = function(event) {
       // Stores the selected event for display in the selectedEvent view
@@ -32,12 +32,12 @@ angular.module('soundGlomerate.results', ['soundGlomerate.resultsFactory', 'soun
     $scope.genresSwap = swap(Results.eventBriteGenres);
 
 
-    var setCurrentGenre = function (genre) {
+    $scope.setCurrentGenre = function (genre) {
       $scope.currentGenre = $scope.genresSwap[genre];
       console.log($scope.currentGenre);
     }; 
 
-    $scope.setCurrentGenre = setCurrentGenre; 
+    // setCurrentGenre = setCurrentGenre; 
 }]);
 
   
